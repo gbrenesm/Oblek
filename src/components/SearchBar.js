@@ -4,24 +4,31 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 function SearchBar() {
   const [wordsArray, setWordsArray] = useState([])
-
-  function onSubmit(e){
+  const [placeHolder, setPlaceHolder] = useState("Buscar palabras clave")
+  const [disabled, setDisabled] = useState(true)
+  
+  const onChange = e => {
     e.preventDefault()
+    setPlaceHolder("")
+    setDisabled(false)
+    if (wordsArray.length === 0) setPlaceHolder("Buscar palabras clave")
   }
 
-  function addWords(e){
+  const addWords = e => {
     //Cheking if 'Enter' has been press so then I can add the new word or phrase to the array.
     if (e.code === 'Enter'){
       //Adding the new word or phrase to the array.
       setWordsArray([...wordsArray, e.target.value])
       //Cleaning the input so the value is not all the words that has already been added.
       e.target.value = ''
+      setDisabled(false)
     }
   }
 
   const removeWord = indexWord => {
     setWordsArray(wordsArray.filter((_, i) => i !== indexWord))
   }
+
 
   return (
     <div>
@@ -32,9 +39,9 @@ function SearchBar() {
           </>
         ))}
       </ul>
-      <form onSubmit={onSubmit}>
-        <input onKeyPress={addWords} type="text" placeholder="Buscar palabras clave"/>
-        <button type="submit">Buscar</button>
+      <form onSubmit={onChange}>
+        <input onKeyPress={addWords} type="text" placeholder={placeHolder}/>
+        <button type="submit" disabled={disabled} >Buscar</button>
       </form>
       <p>Presiona "Enter" para generar cada palabra</p>
     </div>
