@@ -1,0 +1,6 @@
+@mixin inputStyle(){
+  background-color: $blueBackgroundInput;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid 1px $borderInput;
+};

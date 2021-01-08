@@ -29,7 +29,6 @@ function SearchBar() {
     setWordsArray(wordsArray.filter((_, i) => i !== indexWord))
   }
 
-
   return (
     <div>
       <ul>
