@@ -1,39 +1,49 @@
+// Here are the styles for the first component: the search bar.
+
 .search-bar{
+  margin-top: 4%;
+  
   div {
     @include flex();
-    @include inputStyle();
-    margin: 3%;
+  }
+
+  div div {
+    @include flex();
+    background-color: $blueLight;
+    padding: 5px 10px;
+    border-radius: $borderRadius;
     min-height: 30px;
-    width: 90%
+    width: 75%;
+    margin-right: 10px;
   }
 
   ul {
     @include flex();
     list-style: none;
     padding: 0;
-
+    margin: 0;
   }
 
   li {
-    @include flex();
-    justify-content: center;
     background-color: white;
     width: auto;
-    height: 25px;
-    padding: 0 8px;
+    height: auto;
+    padding: 3px 8px;
+    margin: 3px 5px;
     border-radius: $borderRadius;
-    margin: 0 8px 8px 0;
   }
 
+  // This span wraps de icon for the cross on the list's elements.
+  span {
+    margin-left: 5px;
+    font-size: 12px;
+  }
 
   input {
     flex: 1;
 		border: none;
-		height: 4px;
-		font-size: 14px;
-    padding: 4px 0 0 0;
     background-color: $blueLight;
-    width: 150%;
+    height: 30px;
   }
   
   input::placeholder {
@@ -45,13 +55,18 @@
     padding: 5px 10px;
     font-family: $mainFont;
     border: none;
-    border-radius: 5px;
+    border-radius: $borderRadius;
     background-color: $blueSearchBtn;
     color: white;
-    margin: 50px;
   }
 
   button:disabled {
     background-color: gray;
+  }
+
+  // The only paragraph is the one in the bottom of the component.
+  p {
+    font-size: 12px;
+    margin-top: 5px;
   }
 }

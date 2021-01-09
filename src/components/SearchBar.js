@@ -7,12 +7,6 @@ function SearchBar() {
   const [placeHolder, setPlaceHolder] = useState("Buscar palabras clave")
   const [disabled, setDisabled] = useState(true)
   
-  const onChange = e => {
-    e.preventDefault()
-    setPlaceHolder("")
-    setDisabled(false)
-    if (wordsArray.length === 0) setPlaceHolder("Buscar palabras clave")
-  }
 
   const addWords = e => {
     //Cheking if 'Enter' has been press and the value is not empty so then I can add the new word or phrase to the array.
@@ -32,18 +26,18 @@ function SearchBar() {
   return (
     <div className='search-bar'>
       <div>
-        <ul>
-          {wordsArray.map((word, i)=> (
-            <>
-            <li key={i}>{word}<FontAwesomeIcon icon={faTimes} onClick={()=> removeWord(i)}/></li>
-            </>
-          ))}
-        </ul>
-        <form onSubmit={onChange}>
-          <input onKeyPress={addWords} type="text" placeholder={placeHolder}/>
-        </form>
-      </div>
+        <div>
+          <ul>
+            {wordsArray.map((word, i)=> (
+              <>
+              <li key={i}>{word}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeWord(i)}/></span></li>
+              </>
+            ))}
+          </ul>
+            <input onKeyPress={addWords} type="text" placeholder={placeHolder}/>
+        </div>
         <button type="submit" disabled={disabled} >Buscar</button>
+      </div>
         <p>Presiona "Enter" para generar cada palabra</p>
     </div>
   )

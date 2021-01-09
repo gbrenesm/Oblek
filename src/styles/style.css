@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+.search-bar {
+  margin-top: 4%;
+}
+
 .search-bar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.search-bar div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,9 +26,9 @@
   background-color: #dae1f3;
   padding: 5px 10px;
   border-radius: 5px;
-  margin: 3%;
-  min-height: 48px;
-  width: 90%;
+  min-height: 30px;
+  width: 75%;
+  margin-right: 10px;
 }
 
 .search-bar ul {
@@ -27,27 +42,21 @@
       flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 8px 0 0 0;
+  margin: 0;
 }
 
 .search-bar li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: white;
   width: auto;
-  height: 32px;
-  padding: 0 8px;
+  height: auto;
+  padding: 3px 8px;
+  margin: 3px 5px;
   border-radius: 5px;
-  margin: 0 8px 8px 0;
+}
+
+.search-bar span {
+  margin-left: 5px;
+  font-size: 12px;
 }
 
 .search-bar input {
@@ -55,10 +64,8 @@
       -ms-flex: 1;
           flex: 1;
   border: none;
-  height: 46px;
-  font-size: 14px;
-  padding: 4px 0 0 0;
   background-color: #dae1f3;
+  height: 30px;
 }
 
 .search-bar input::-webkit-input-placeholder {
@@ -85,11 +92,15 @@
   border-radius: 5px;
   background-color: #00aaaa;
   color: white;
-  margin: 50px;
 }
 
 .search-bar button:disabled {
   background-color: gray;
+}
+
+.search-bar p {
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 body {
