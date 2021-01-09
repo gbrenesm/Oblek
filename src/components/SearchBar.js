@@ -29,9 +29,7 @@ function SearchBar() {
         <div>
           <ul>
             {wordsArray.map((word, i)=> (
-              <>
               <li key={i}>{word}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeWord(i)}/></span></li>
-              </>
             ))}
           </ul>
             <input onKeyPress={addWords} type="text" placeholder={placeHolder}/>
