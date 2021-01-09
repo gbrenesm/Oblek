@@ -3,19 +3,57 @@
 .dropdown {
   
   //For the first ul (the one with thce selected characters)
-  ul:nth-child(1) {
-    @include flex();
-    @include tagList();
-  }
+  >div:nth-child(1){
+    @include flex(nowrap);
+    @include inputBorder();
+    justify-content: space-between;
+    @include inputSizes;
 
-  span {
-    @include span();
-  }
+    ul {
+      @include flex(wrap);
+      @include tagList();
 
+      
+      
+      li {
+        @include tag($blueLight);
+      }
+    }
+  
+    span {
+      @include span();
+    }
+  
+    p {
+      cursor: pointer;
+    }
+  }
 
   //For the second ul (the dropdown list)
-  ul:nth-child(3) {
-    
+  >div:nth-child(2) {
+    height: 20vh;
+    overflow: scroll;
+    @include inputBorder();
+
+    ul {
+      @include tagList();
+    }
+
+    div {
+      @include flex(nowrap);
+      justify-content: space-between;
+      padding: 5px;
+    }
+
+    li {
+      cursor: pointer;
+
+    }
+
+    p {
+      margin: 0;
+
+    }
   }
 
   

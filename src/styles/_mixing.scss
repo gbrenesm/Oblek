@@ -1,7 +1,7 @@
-@mixin flex {
+@mixin flex($wrap) {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: $wrap;
 }
 
 @mixin span {
@@ -10,18 +10,27 @@
   cursor: pointer;
 }
 
-@mixin tagList(color) {
+@mixin tagList {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: color;
-
 }
 
-@mixin tag {
+@mixin tag($color) {
   width: auto;
   height: auto;
   padding: 3px 8px;
   margin: 3px 5px;
+  border-radius: $borderRadius;
+  background-color: $color;
+}
+
+@mixin inputSizes {
+  height: $inputHeights;
+  padding: 5px 8px;
+}
+
+@mixin inputBorder {
+  border: 1px solid $borderInput;
   border-radius: $borderRadius;
 }

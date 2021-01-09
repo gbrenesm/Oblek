@@ -23,11 +23,13 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: 35px;
+  padding: 5px 8px;
   background-color: #dae1f3;
-  padding: 5px 10px;
   border-radius: 5px;
-  min-height: 30px;
-  width: 75%;
+  border: 1px solid #808393;
+  min-height: 35px;
+  width: 70%;
   margin-right: 10px;
 }
 
@@ -46,12 +48,12 @@
 }
 
 .search-bar li {
-  background-color: white;
   width: auto;
   height: auto;
   padding: 3px 8px;
   margin: 3px 5px;
   border-radius: 5px;
+  background-color: white;
 }
 
 .search-bar span {
@@ -86,8 +88,8 @@
 }
 
 .search-bar button {
-  height: 35px;
-  padding: 5px 10px;
+  height: 40px;
+  padding: 5px 15px;
   font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 5px;
@@ -104,7 +106,25 @@
   margin-top: 5px;
 }
 
-.dropdown ul:nth-child(1) {
+.dropdown > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border: 1px solid #808393;
+  border-radius: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 35px;
+  padding: 5px 8px;
+}
+
+.dropdown > div:nth-child(1) ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,14 +138,63 @@
   margin: 0;
 }
 
-.dropdown span {
+.dropdown > div:nth-child(1) ul li {
+  width: auto;
+  height: auto;
+  padding: 3px 8px;
+  margin: 3px 5px;
+  border-radius: 5px;
+  background-color: #dae1f3;
+}
+
+.dropdown > div:nth-child(1) span {
   margin-left: 5px;
   font-size: 12px;
   cursor: pointer;
 }
 
+.dropdown > div:nth-child(1) p {
+  cursor: pointer;
+}
+
+.dropdown > div:nth-child(2) {
+  height: 20vh;
+  overflow: scroll;
+  border: 1px solid #808393;
+  border-radius: 5px;
+}
+
+.dropdown > div:nth-child(2) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown > div:nth-child(2) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+}
+
+.dropdown > div:nth-child(2) li {
+  cursor: pointer;
+}
+
+.dropdown > div:nth-child(2) p {
+  margin: 0;
+}
+
 body {
-  margin: 0 10px;
+  margin: 10px;
   font-family: "Poppins", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

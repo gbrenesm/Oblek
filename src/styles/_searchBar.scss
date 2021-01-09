@@ -4,22 +4,23 @@
   margin-top: 4%;
   
   div {
-    @include flex;
+    @include flex(wrap);
   }
 
   div div {
-    @include flex;
+    @include flex(wrap);
+    @include inputSizes();
     background-color: $blueLight;
-    padding: 5px 10px;
     border-radius: $borderRadius;
-    min-height: 30px;
-    width: 75%;
+    border: 1px solid $borderInput;
+    min-height: $inputHeights;
+    width: 70%;
     margin-right: 10px;
   }
 
   ul {
-    @include flex;
-    @include tagList;
+    @include flex(wrap);
+    @include tagList();
   }
 
   li {
@@ -28,7 +29,7 @@
 
   // This span wraps de icon for the cross on the list's elements.
   span {
-    @include span;
+    @include span();
   }
 
   input {
@@ -43,8 +44,8 @@
   }
 
   button {
-    height: 35px;
-    padding: 5px 10px;
+    height: 40px;
+    padding: 5px 15px;
     font-family: $mainFont;
     border: none;
     border-radius: $borderRadius;

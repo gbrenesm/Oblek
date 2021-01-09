@@ -6,17 +6,20 @@ import { faTimes, faChevronDown, faChevronUp, faCheck } from '@fortawesome/free-
 function Dropdown() {
   const [characters, setCharacters] = useState(null)
   const [selectedCharacters, setSelectedCharacters] = useState([])
+  const [emptyArray, setEmptyArray] = useState(true)
   const [open, setOpen] = useState(false)
   
   const removeCharacter = character => {
     setSelectedCharacters(selectedCharacters.filter(elem => elem.id !== character.id))
+    if (selectedCharacters.length === 1) setEmptyArray(true)
   }
 
   const addCharacter = character => {
     // Firs I check if the element is alredy in the selectedChracters arrar.
     if(!selectedCharacters.some(elem => elem.id === character.id)) {
       //If not the elemet is added.
-    setSelectedCharacters([...selectedCharacters, character]) 
+    setSelectedCharacters([...selectedCharacters, character])
+    setEmptyArray(false)
     } else {
       // Else is removed from the array.
       removeCharacter(character)
@@ -35,20 +38,25 @@ function Dropdown() {
 
   return (
     <div className="dropdown">
-      <ul>
-        {selectedCharacters.map(character => (
-              <li key={character.id}>{character.name}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeCharacter(character)}/></span></li>
-        ))}
-      </ul>
       <div>
-        <p onClick={() => setOpen(!open)}>Selcciona un personaje <span>{open? <FontAwesomeIcon icon={faChevronUp}/> : <FontAwesomeIcon icon={faChevronDown}/>}</span></p>
-        
+
+          {!emptyArray && <ul>
+            {selectedCharacters.map(character => (
+                  <li key={character.id}>{character.name}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeCharacter(character)}/></span></li>
+            ))}
+          </ul>}
+        {emptyArray && <p onClick={() => setOpen(!open)}>Selcciona un personaje</p>}
+        <p onClick={() => setOpen(!open)}>{open? <FontAwesomeIcon icon={faChevronUp}/> : <FontAwesomeIcon icon={faChevronDown}/>}</p>
+      </div>
+      <div>
         {open && <ul>
           {characters?.map(character =>(
+            <div>
             <li key={character.name} onClick={() => addCharacter(character)}>{character.name}
               {/* In this span I check if the element is selected, if true then shows a check symbol. */}
-              <span>{selectedCharacters.some(elem => elem.id === character.id) && <FontAwesomeIcon icon={faCheck}/>}</span>
             </li>
+            <p>{selectedCharacters.some(elem => elem.id === character.id) && <FontAwesomeIcon icon={faCheck}/>}</p>
+            </div>
           ))}
         </ul>}
       </div>
