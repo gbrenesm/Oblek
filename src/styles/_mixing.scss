@@ -1,6 +1,11 @@
 @mixin inputStyle(){
-  background-color: $blueBackgroundInput;
+  background-color: $blueLight;
   padding: 5px 10px;
-  border-radius: 5px;
-  border: solid 1px $borderInput;
-};
+  border-radius: $borderRadius;
+}
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

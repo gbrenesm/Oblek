@@ -1,3 +1,57 @@
-input {
-  @include inputStyle();
+.search-bar{
+  div {
+    @include flex();
+    @include inputStyle();
+    margin: 3%;
+    min-height: 30px;
+    width: 90%
+  }
+
+  ul {
+    @include flex();
+    list-style: none;
+    padding: 0;
+
+  }
+
+  li {
+    @include flex();
+    justify-content: center;
+    background-color: white;
+    width: auto;
+    height: 25px;
+    padding: 0 8px;
+    border-radius: $borderRadius;
+    margin: 0 8px 8px 0;
+  }
+
+
+  input {
+    flex: 1;
+		border: none;
+		height: 4px;
+		font-size: 14px;
+    padding: 4px 0 0 0;
+    background-color: $blueLight;
+    width: 150%;
+  }
+  
+  input::placeholder {
+    font-family: $mainFont;
+  }
+
+  button {
+    height: 35px;
+    padding: 5px 10px;
+    font-family: $mainFont;
+    border: none;
+    border-radius: 5px;
+    background-color: $blueSearchBtn;
+    color: white;
+    margin: 50px;
+  }
+
+  button:disabled {
+    background-color: gray;
+  }
 }
