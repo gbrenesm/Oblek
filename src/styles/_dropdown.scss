@@ -1,0 +1,22 @@
+// Here are the styles for the second component: the dropdown character
+
+.dropdown {
+  
+  //For the first ul (the one with thce selected characters)
+  ul:nth-child(1) {
+    @include flex();
+    @include tagList();
+  }
+
+  span {
+    @include span();
+  }
+
+
+  //For the second ul (the dropdown list)
+  ul:nth-child(3) {
+    
+  }
+
+  
+}

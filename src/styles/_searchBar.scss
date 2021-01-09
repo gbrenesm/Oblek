@@ -4,11 +4,11 @@
   margin-top: 4%;
   
   div {
-    @include flex();
+    @include flex;
   }
 
   div div {
-    @include flex();
+    @include flex;
     background-color: $blueLight;
     padding: 5px 10px;
     border-radius: $borderRadius;
@@ -18,25 +18,17 @@
   }
 
   ul {
-    @include flex();
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @include flex;
+    @include tagList;
   }
 
   li {
-    background-color: white;
-    width: auto;
-    height: auto;
-    padding: 3px 8px;
-    margin: 3px 5px;
-    border-radius: $borderRadius;
+    @include tag(white);
   }
 
   // This span wraps de icon for the cross on the list's elements.
   span {
-    margin-left: 5px;
-    font-size: 12px;
+    @include span;
   }
 
   input {
