@@ -7,14 +7,19 @@ function Dropdown() {
   const [characters, setCharacters] = useState(null)
   const [selectedCharacters, setSelectedCharacters] = useState([])
 
-  const removeWord = index => {
-    setSelectedCharacters(selectedCharacters.filter((_, i) => i !== index))
+  const addCharacter = character => {
+    setSelectedCharacters([...selectedCharacters, character])
+    setCharacters(characters.filter(elem => elem.id !== character.id))
+  }
+
+  const removeCharacter = character => {
+    setSelectedCharacters(selectedCharacters.filter(elem => elem.id !== character.id))
+    setCharacters([...characters, character])
   }
 
   useEffect(() => {
     const fetchData = async () => {
       const {data} = await axios.get('https://rickandmortyapi.com/api/character/?page=1')
-      console.log(data.results)
       setCharacters(data.results.slice(0, 15))
     }
 
@@ -25,14 +30,14 @@ function Dropdown() {
     <div>
       <ul>
         {selectedCharacters.map(character => (
-              <li key={character.index}>{character.name}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeWord(character.index)}/></span></li>
+              <li key={character.id}>{character.name}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeCharacter(character)}/></span></li>
         ))}
       </ul>
-      <select name="character" id="character">
+      <ul>
         {characters?.map(character =>(
-          <option value={character.name}>{character.name}</option>
+          <li key={character.name} onClick={() => addCharacter(character)}>{character.name}</li>
         ))}
-      </select>
+      </ul>
     </div>
   )
 };
