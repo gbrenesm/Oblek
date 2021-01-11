@@ -1,5 +1,6 @@
 import { useState, useEffect} from 'react';
 import axios from 'axios';
+import Card from './Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faChevronDown, faChevronUp, faCheck } from '@fortawesome/free-solid-svg-icons'
 
@@ -54,13 +55,19 @@ function Dropdown() {
           {characters?.map(character =>(
             <div>
             <li key={character.name} onClick={() => addCharacter(character)}>{character.name}
-              {/* In this span I check if the element is selected, if true then shows a check symbol. */}
             </li>
+              {/* Here I check if the element is selected, if true then shows a check symbol. */}
             <p>{selectedCharacters.some(elem => elem.id === character.id) && <FontAwesomeIcon icon={faCheck}/>}</p>
             </div>
           ))}
         </ul>
       </div>}
+      <hr/>
+      <section>
+        {!emptyArray && selectedCharacters.map(character => (
+          <Card character={character}/>
+        ))}
+      </section>
     </div>
   )
 };
