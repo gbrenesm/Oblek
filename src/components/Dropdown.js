@@ -69,6 +69,7 @@ function Dropdown() {
         {!emptyArray && selectedCharacters.sort((a, b) => a.id - b.id).map(character => (
           <Card key={character.id} character={character}/>
         ))}
+        {emptyArray && <p>No hay personajes selccionados aún.</p>}
       </section>
     </div>
   )

@@ -13,7 +13,7 @@
     border-radius: $borderRadius;
     border: 1px solid $borderInput;
     min-height: $inputHeights;
-    width: 70%;
+    width: 62vw;
     margin-right: 10px;
     padding: 5px 8px;
 
@@ -64,4 +64,12 @@
     font-size: 12px;
     margin-top: 5px;
   }
+
+  // For tables
+  @media (max-width: 961px) and (min-width: 767px){
+    div div {
+      width: 78vw;
+    }
+  }
+
 }

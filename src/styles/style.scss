@@ -7,6 +7,11 @@
 body {
   margin: 10px;
   font-family: $mainFont;
+
+  // For tablets
+  @media (max-width: 961px) and (min-width: 767px){
+    margin: 10px 30px;
+  }
 }
 
 h1 {

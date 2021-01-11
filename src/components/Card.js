@@ -31,7 +31,7 @@ function Card({character}) {
         </div>
         <p>Origin: <u>{character.origin.name}</u></p>
         <p>Last know location: <u>{character.location.name}</u></p>
-        {character.status === 'Dead' && <img src="Dead_stamp.png" alt="Dead stamp"/>}
+        {character.status === 'Dead' && <img src="Dead_stamp.png" alt="Dead stamp" className="dead-stamp"/>}
       </div>}
     </div>
   )

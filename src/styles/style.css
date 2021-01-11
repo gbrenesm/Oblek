@@ -43,7 +43,7 @@
   border-radius: 5px;
   border: 1px solid #808393;
   min-height: 35px;
-  width: 70%;
+  width: 62vw;
   margin-right: 10px;
   padding: 5px 8px;
 }
@@ -122,6 +122,12 @@
 .search-bar p {
   font-size: 12px;
   margin-top: 5px;
+}
+
+@media (max-width: 961px) and (min-width: 767px) {
+  .search-bar div div {
+    width: 78vw;
+  }
 }
 
 .dropdown > div:nth-child(2) {
@@ -211,6 +217,11 @@
 
 .dropdown > div:nth-child(3) li {
   cursor: pointer;
+}
+
+.dropdown > div:nth-child(3) p {
+  color: #00aaaa;
+  margin-right: 10px;
 }
 
 .card {
@@ -308,16 +319,50 @@
   width: 50%;
 }
 
-.card .more-info > img {
+.card .more-info .dead-stamp {
   height: 60%;
   position: absolute;
-  top: 35%;
-  left: 40%;
+  top: 28%;
+  left: 30%;
+}
+
+@media (max-width: 961px) and (min-width: 767px) {
+  .card {
+    width: 35vw;
+    height: 50vw;
+  }
+  .card .basic {
+    height: 100%;
+  }
+  .card .basic p {
+    padding: 15px 5px 10px;
+  }
+}
+
+@media (max-width: 961px) and (min-width: 767px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 body {
   margin: 10px;
   font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 961px) and (min-width: 767px) {
+  body {
+    margin: 10px 30px;
+  }
 }
 
 h1 {

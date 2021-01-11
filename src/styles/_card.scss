@@ -7,79 +7,97 @@
   cursor: pointer;
 
 // For the basic info
-.basic {
-  background-color: $cardBackground;
-  text-align: center;
-  color: white;
-
-  img {
-    width: 100%;
-    height: 84%;
-    object-fit: cover;
-  }
-
-  p {
-    padding: 5px 5px 10px;
-  }
-
-  span {
-    @include span();
-    background-color: white;
-    color: $cardBackground;
-    padding: 5px 8px;
-    border-radius: 50%;
-  }
-}
-
-.more-info {
-  border: 1px solid $borderInput;
-  height: 98%;
-  border-radius: $borderRadius;
-  padding: 5px;
-  background-color: $cardBackground;
-  font-family: $cardFont;
-  position: relative;
-
-  h2 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 28px;
-  }
- 
-
-
-  // For the title of the card and de number.
-  >div:nth-child(1){
-    @include flex(nowrap, space-between);
-  }
-
-  //For character info and image.
-  >div:nth-child(2){
-    @include flex(nowrap, space-between);
+  .basic {
+    background-color: $cardBackground;
+    text-align: center;
+    color: white;
 
     img {
-      width: 98%;
+      width: 100%;
+      height: 84%;
       object-fit: cover;
-      border: 3px solid $imageBackground;
-      margin-right: 10px;
     }
 
-    div {
-      width: 50%;
+    p {
+      padding: 5px 5px 10px;
     }
+
+    span {
+      @include span();
+      background-color: white;
+      color: $cardBackground;
+      padding: 5px 8px;
+      border-radius: 50%;
+    }
+  }
+
+  .more-info {
+    border: 1px solid $borderInput;
+    height: 98%;
+    border-radius: $borderRadius;
+    padding: 5px;
+    background-color: $cardBackground;
+    font-family: $cardFont;
+    position: relative;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    // For the title of the card and de number.
+    >div:nth-child(1){
+      @include flex(nowrap, space-between);
+    }
+
+    //For character info and image.
+    >div:nth-child(2){
+      @include flex(nowrap, space-between);
+
+      img {
+        width: 98%;
+        object-fit: cover;
+        border: 3px solid $imageBackground;
+        margin-right: 10px;
+      }
+
+      div {
+        width: 50%;
+      }
+      
+    }
+
+  .dead-stamp {
+      height: 60%;
+      position: absolute;
+      top:28%;
+      left: 30%;
+
+    }
+  }
+
+  // For tablets
+  @media (max-width: 961px) and (min-width: 767px){
+    width: 35vw;
+    height: 50vw;
+
+    .basic {
+      height: 100%;
+      p {
+        padding: 15px 5px 10px;
+      }
+    }
+
     
   }
-
-  // For the death stamp
-  >img {
-    height: 60%;
-    position: absolute;
-    top:35%;
-    left: 40%;
-
-  }
 }
+
+section {
+  @media (max-width: 961px) and (min-width: 767px){
+    @include flex(wrap, space-around)
+  }
 }
