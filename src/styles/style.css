@@ -203,9 +203,6 @@
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -226,7 +223,7 @@
 }
 
 .card .basic {
-  background-color: #00aaaa;
+  background-color: #dbd4b7;
   text-align: center;
   color: white;
 }
@@ -247,7 +244,7 @@
   font-size: 12px;
   cursor: pointer;
   background-color: white;
-  color: #00aaaa;
+  color: #dbd4b7;
   padding: 5px 8px;
   border-radius: 50%;
 }
@@ -257,9 +254,21 @@
   height: 98%;
   border-radius: 5px;
   padding: 5px;
+  background-color: #dbd4b7;
+  font-family: "JMH Typewriter";
+  position: relative;
 }
 
-.card .more-info div:nth-child(1) {
+.card .more-info h2 {
+  font-size: 18px;
+}
+
+.card .more-info p {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.card .more-info > div:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,21 +277,42 @@
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.card .more-info div:nth-child(1) img {
-  width: 40%;
-  padding: 1px;
-  border: 10px solid #00aaaa;
-  margin-left: 10px;
+.card .more-info > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.card .more-info div:nth-child(1) p {
-  font-size: 14px;
-  font-family: "JMH Typewriter";
+.card .more-info > div:nth-child(2) img {
+  width: 98%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #c0b791;
+  margin-right: 10px;
+}
+
+.card .more-info > div:nth-child(2) div {
+  width: 50%;
+}
+
+.card .more-info > img {
+  height: 60%;
+  position: absolute;
+  top: 35%;
+  left: 40%;
 }
 
 body {

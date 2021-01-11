@@ -8,7 +8,7 @@
 
 // For the basic info
 .basic {
-  background-color: $blueSearchBtn;
+  background-color: $cardBackground;
   text-align: center;
   color: white;
 
@@ -25,7 +25,7 @@
   span {
     @include span();
     background-color: white;
-    color: $blueSearchBtn;
+    color: $cardBackground;
     padding: 5px 8px;
     border-radius: 50%;
   }
@@ -36,20 +36,50 @@
   height: 98%;
   border-radius: $borderRadius;
   padding: 5px;
+  background-color: $cardBackground;
+  font-family: $cardFont;
+  position: relative;
 
-  div:nth-child(1){
-    @include flex(nowrap, flex-start);
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+ 
+
+
+  // For the title of the card and de number.
+  >div:nth-child(1){
+    @include flex(nowrap, space-between);
+  }
+
+  //For character info and image.
+  >div:nth-child(2){
+    @include flex(nowrap, space-between);
+
     img {
-      width: 40%;
-      padding: 1px;
-      border: 10px solid $blueSearchBtn;
-      margin-left: 10px;
+      width: 98%;
+      object-fit: cover;
+      border: 3px solid $imageBackground;
+      margin-right: 10px;
     }
 
-    p {
-      font-size: 14px;
-      font-family: $cardFont;
+    div {
+      width: 50%;
     }
+    
+  }
+
+  // For the death stamp
+  >img {
+    height: 60%;
+    position: absolute;
+    top:35%;
+    left: 40%;
+
   }
 }
 }

@@ -41,8 +41,7 @@
     }
 
     div {
-      @include flex(nowrap, flex-start);
-      justify-content: space-between;
+      @include flex(nowrap, space-between);
       padding: 5px;
     }
 
