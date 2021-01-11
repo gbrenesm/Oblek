@@ -10,7 +10,7 @@
     @include inputSizes;
 
     ul {
-      @include flex(wrap);
+      @include flex(nowrap);
       @include tagList();
 
       

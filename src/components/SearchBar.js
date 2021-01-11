@@ -16,15 +16,21 @@ function SearchBar() {
       //Cleaning the input so the value is not all the words that has already been added.
       e.target.value = ''
       setDisabled(false)
+      setPlaceHolder("")
     }
   }
 
   const removeWord = indexWord => {
     setWordsArray(wordsArray.filter((_, i) => i !== indexWord))
+    if (wordsArray.length === 1){
+      setDisabled(true)
+      setPlaceHolder("Buscar palabras clave")
+    }
   }
 
   return (
     <div className='search-bar'>
+      <h1>1. Barra de navegación</h1>
       <div>
         <div>
           <ul>

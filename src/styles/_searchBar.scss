@@ -9,13 +9,14 @@
 
   div div {
     @include flex(wrap);
-    @include inputSizes();
     background-color: $blueLight;
     border-radius: $borderRadius;
     border: 1px solid $borderInput;
     min-height: $inputHeights;
     width: 70%;
     margin-right: 10px;
+    padding: 5px 8px;
+
   }
 
   ul {
@@ -45,7 +46,7 @@
 
   button {
     height: 40px;
-    padding: 5px 15px;
+    padding: 5px 13px;
     font-family: $mainFont;
     border: none;
     border-radius: $borderRadius;
