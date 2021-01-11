@@ -5,6 +5,7 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
 function Card({character}) {
   const [open, setOpen] = useState(false)
+  
   return (
     <div className='card' onClick={() => setOpen(!open)}>
       {open &&
