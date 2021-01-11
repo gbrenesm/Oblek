@@ -13,14 +13,16 @@ function SearchBar() {
     if (e.code === 'Enter' && e.target.value !== ''){
       //Adding the new word or phrase to the array.
       setWordsArray([...wordsArray, e.target.value])
-      //Cleaning the input so the value is not all the words that has already been added.
+      //Cleaning the input so the new value is not all the words that has already been added.
       e.target.value = ''
+      // Setting button to enable and remove placeholder.
       setDisabled(false)
       setPlaceHolder("")
     }
   }
 
   const removeWord = indexWord => {
+    //Filtering to remove a word.
     setWordsArray(wordsArray.filter((_, i) => i !== indexWord))
     if (wordsArray.length === 1){
       setDisabled(true)

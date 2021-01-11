@@ -63,9 +63,11 @@ function Dropdown() {
         </ul>
       </div>}
       <hr/>
+      <h1>2. Tarjetas de API</h1>
       <section>
-        {!emptyArray && selectedCharacters.map(character => (
-          <Card character={character}/>
+        {/* First I sort the array by the id of the chracters, so the Cards display in that order */}
+        {!emptyArray && selectedCharacters.sort((a, b) => a.id - b.id).map(character => (
+          <Card key={character.id} character={character}/>
         ))}
       </section>
     </div>
