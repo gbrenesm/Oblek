@@ -38,18 +38,19 @@ function Dropdown() {
 
   return (
     <div className="dropdown">
+      <h1>2. Dropdown de API</h1>
       <div>
-
-          {!emptyArray && <ul>
+        {!emptyArray &&
+          <ul>
             {selectedCharacters.map(character => (
-                  <li key={character.id}>{character.name}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeCharacter(character)}/></span></li>
+              <li key={character.id}>{character.name}<span><FontAwesomeIcon icon={faTimes} onClick={()=> removeCharacter(character)}/></span></li>
             ))}
           </ul>}
         {emptyArray && <p onClick={() => setOpen(!open)}>Selcciona un personaje</p>}
         <p onClick={() => setOpen(!open)}>{open? <FontAwesomeIcon icon={faChevronUp}/> : <FontAwesomeIcon icon={faChevronDown}/>}</p>
       </div>
-      <div>
-        {open && <ul>
+      {open && <div>
+        <ul>
           {characters?.map(character =>(
             <div>
             <li key={character.name} onClick={() => addCharacter(character)}>{character.name}
@@ -58,8 +59,8 @@ function Dropdown() {
             <p>{selectedCharacters.some(elem => elem.id === character.id) && <FontAwesomeIcon icon={faCheck}/>}</p>
             </div>
           ))}
-        </ul>}
-      </div>
+        </ul>
+      </div>}
     </div>
   )
 };

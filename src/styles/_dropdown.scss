@@ -1,22 +1,22 @@
 // Here are the styles for the second component: the dropdown character
 
 .dropdown {
-  
   //For the first ul (the one with thce selected characters)
-  >div:nth-child(1){
-    @include flex(nowrap);
+  >div:nth-child(2){
+    @include flex(nowrap, space-between);
     @include inputBorder();
-    justify-content: space-between;
-    @include inputSizes;
+    padding: 5px 8px;
+    height: 36px;
 
     ul {
-      @include flex(nowrap);
+      @include flex(nowrap, flex-start);
       @include tagList();
-
-      
+      overflow: auto;
+      white-space: nowrap;
       
       li {
         @include tag($blueLight);
+        max-height: 25px;
       }
     }
   
@@ -30,31 +30,25 @@
   }
 
   //For the second ul (the dropdown list)
-  >div:nth-child(2) {
+  >div:nth-child(3) {
     height: 20vh;
     overflow: scroll;
     @include inputBorder();
+    border-top: 5px solid $blueSearchBtn;
 
     ul {
       @include tagList();
     }
 
     div {
-      @include flex(nowrap);
+      @include flex(nowrap, flex-start);
       justify-content: space-between;
       padding: 5px;
     }
 
     li {
       cursor: pointer;
-
     }
 
-    p {
-      margin: 0;
-
-    }
   }
-
-  
 }

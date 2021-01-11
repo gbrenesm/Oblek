@@ -12,6 +12,9 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .search-bar div div {
@@ -23,6 +26,9 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-color: #dae1f3;
   border-radius: 5px;
   border: 1px solid #808393;
@@ -41,6 +47,9 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -48,11 +57,11 @@
 
 .search-bar li {
   width: auto;
-  height: auto;
   padding: 3px 8px;
   margin: 3px 5px;
   border-radius: 5px;
   background-color: white;
+  height: auto;
 }
 
 .search-bar span {
@@ -105,7 +114,7 @@
   margin-top: 5px;
 }
 
-.dropdown > div:nth-child(1) {
+.dropdown > div:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,15 +123,16 @@
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  border: 1px solid #808393;
-  border-radius: 5px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 35px;
+  border: 1px solid #808393;
+  border-radius: 5px;
+  padding: 5px 8px;
+  height: 36px;
 }
 
-.dropdown > div:nth-child(1) ul {
+.dropdown > div:nth-child(2) ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,44 +141,50 @@
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow: auto;
+  white-space: nowrap;
 }
 
-.dropdown > div:nth-child(1) ul li {
+.dropdown > div:nth-child(2) ul li {
   width: auto;
-  height: auto;
   padding: 3px 8px;
   margin: 3px 5px;
   border-radius: 5px;
   background-color: #dae1f3;
+  max-height: 25px;
 }
 
-.dropdown > div:nth-child(1) span {
+.dropdown > div:nth-child(2) span {
   margin-left: 5px;
   font-size: 12px;
   cursor: pointer;
 }
 
-.dropdown > div:nth-child(1) p {
+.dropdown > div:nth-child(2) p {
   cursor: pointer;
 }
 
-.dropdown > div:nth-child(2) {
+.dropdown > div:nth-child(3) {
   height: 20vh;
   overflow: scroll;
   border: 1px solid #808393;
   border-radius: 5px;
+  border-top: 5px solid #00aaaa;
 }
 
-.dropdown > div:nth-child(2) ul {
+.dropdown > div:nth-child(3) ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.dropdown > div:nth-child(2) div {
+.dropdown > div:nth-child(3) div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,18 +193,17 @@
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5px;
 }
 
-.dropdown > div:nth-child(2) li {
+.dropdown > div:nth-child(3) li {
   cursor: pointer;
-}
-
-.dropdown > div:nth-child(2) p {
-  margin: 0;
 }
 
 body {
@@ -202,5 +217,9 @@ h1 {
 
 hr {
   margin: 25px 20px;
+}
+
+p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

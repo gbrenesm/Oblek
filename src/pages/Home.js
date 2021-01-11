@@ -7,6 +7,7 @@ function Home() {
       <SearchBar/>
       <hr/>
       <Dropdown/>
+      <hr/>
     </div>
   )
 }
