@@ -206,6 +206,28 @@
   cursor: pointer;
 }
 
+.card {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #00aaaa;
+  margin: 20px auto;
+  color: white;
+  text-align: center;
+  width: 70vw;
+  height: 40vh;
+}
+
+.card img {
+  width: 100%;
+  height: 85%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card p {
+  padding: 5px 5px 10px;
+}
+
 body {
   margin: 10px;
   font-family: "Poppins", sans-serif;
