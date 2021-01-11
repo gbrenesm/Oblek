@@ -1,20 +1,55 @@
 .card {
   overflow: hidden;
   border-radius: $borderRadius;
-  background-color: $blueSearchBtn;
   margin: 20px auto;
-  color: white;
-  text-align: center;
   width: 70vw;
   height: 40vh;
+  cursor: pointer;
+
+// For the basic info
+.basic {
+  background-color: $blueSearchBtn;
+  text-align: center;
+  color: white;
 
   img {
     width: 100%;
-    height: 85%;
+    height: 84%;
     object-fit: cover;
   }
 
   p {
     padding: 5px 5px 10px;
   }
+
+  span {
+    @include span();
+    background-color: white;
+    color: $blueSearchBtn;
+    padding: 5px 8px;
+    border-radius: 50%;
+  }
+}
+
+.more-info {
+  border: 1px solid $borderInput;
+  height: 98%;
+  border-radius: $borderRadius;
+  padding: 5px;
+
+  div:nth-child(1){
+    @include flex(nowrap, flex-start);
+    img {
+      width: 40%;
+      padding: 1px;
+      border: 10px solid $blueSearchBtn;
+      margin-left: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      font-family: $cardFont;
+    }
+  }
+}
 }

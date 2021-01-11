@@ -1,7 +1,11 @@
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+@font-face { font-family: JMH Typewriter; src: url('JMH Typewriter.otf') format('otf')};
+@font-face { font-family: JMH Typewriter; src: url('JMH Typewriter.ttf') format('truetype')};
+
 
 $mainFont: 'Poppins', sans-serif;
+$cardFont: 'JMH Typewriter';
 
 
 //Colors
@@ -11,6 +15,8 @@ $blueLight: #dae1f3;
 $blueSearchBtn: #00aaaa;
 
 $borderInput: #808393;
+
+$cardBackground: #dbd4b7;
 
 
 //Sizes
