@@ -4,7 +4,8 @@
   margin-top: 4%;
   
   div {
-    @include flex(wrap, flex-start);
+    @include flex(wrap, space-between);
+    width: 100%
   }
 
   div div {
@@ -13,7 +14,7 @@
     border-radius: $borderRadius;
     border: 1px solid $borderInput;
     min-height: $inputHeights;
-    width: 62vw;
+    width: calc(100% - 100px);
     margin-right: 10px;
     padding: 5px 8px;
 
@@ -53,6 +54,7 @@
     border-radius: $borderRadius;
     background-color: $blueSearchBtn;
     color: white;
+
   }
 
   button:disabled {
@@ -64,12 +66,4 @@
     font-size: 12px;
     margin-top: 5px;
   }
-
-  // For tables
-  @media (max-width: 961px) and (min-width: 767px){
-    div div {
-      width: 78vw;
-    }
-  }
-
 }

@@ -22,9 +22,10 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .search-bar div div {
@@ -43,7 +44,7 @@
   border-radius: 5px;
   border: 1px solid #808393;
   min-height: 35px;
-  width: 62vw;
+  width: calc(100% - 100px);
   margin-right: 10px;
   padding: 5px 8px;
 }
@@ -122,12 +123,6 @@
 .search-bar p {
   font-size: 12px;
   margin-top: 5px;
-}
-
-@media (max-width: 961px) and (min-width: 767px) {
-  .search-bar div div {
-    width: 78vw;
-  }
 }
 
 .dropdown > div:nth-child(2) {
