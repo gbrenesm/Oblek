@@ -1,25 +1,28 @@
 .card {
-  overflow: hidden;
+  border: 1px solid $borderInput;
   border-radius: $borderRadius;
-  margin: 20px auto;
-  width: 70vw;
-  height: 40vh;
+  margin: 20px;
+  width: 280px;
+  height: 380px;
   cursor: pointer;
 
-// For the basic info
+// For displaying the basic info card.
   .basic {
     background-color: $cardBackground;
     text-align: center;
     color: white;
+    overflow: hidden;
+    height: 100%;
+    
 
     img {
       width: 100%;
-      height: 84%;
+      height: 85%;
       object-fit: cover;
     }
 
     p {
-      padding: 5px 5px 10px;
+      padding: 10px 0;
     }
 
     span {
@@ -31,14 +34,13 @@
     }
   }
 
+  // For displaying more info card.
   .more-info {
-    border: 1px solid $borderInput;
-    height: 98%;
-    border-radius: $borderRadius;
     padding: 5px;
     background-color: $cardBackground;
     font-family: $cardFont;
     position: relative;
+    height: calc(100% - 10px);
 
     h2 {
       font-size: 18px;
@@ -49,7 +51,7 @@
       line-height: 28px;
     }
 
-    // For the title of the card and de number.
+    // For the title of the card and the number.
     >div:nth-child(1){
       @include flex(nowrap, space-between);
     }
@@ -74,30 +76,13 @@
   .dead-stamp {
       height: 60%;
       position: absolute;
-      top:28%;
-      left: 30%;
-
+      top: 40%;
+      left: 20%;
     }
-  }
-
-  // For tablets
-  @media (max-width: 961px) and (min-width: 767px){
-    width: 35vw;
-    height: 50vw;
-
-    .basic {
-      height: 100%;
-      p {
-        padding: 15px 5px 10px;
-      }
-    }
-
-    
   }
 }
 
+// To make the cards display flex.
 section {
-  @media (max-width: 961px) and (min-width: 767px){
-    @include flex(wrap, space-around)
-  }
+  @include flex(wrap, space-around)
 }

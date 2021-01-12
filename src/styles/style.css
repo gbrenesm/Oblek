@@ -221,11 +221,11 @@
 }
 
 .card {
-  overflow: hidden;
+  border: 1px solid #808393;
   border-radius: 5px;
-  margin: 20px auto;
-  width: 70vw;
-  height: 40vh;
+  margin: 20px;
+  width: 280px;
+  height: 380px;
   cursor: pointer;
 }
 
@@ -233,17 +233,19 @@
   background-color: #dbd4b7;
   text-align: center;
   color: white;
+  overflow: hidden;
+  height: 100%;
 }
 
 .card .basic img {
   width: 100%;
-  height: 84%;
+  height: 85%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .card .basic p {
-  padding: 5px 5px 10px;
+  padding: 10px 0;
 }
 
 .card .basic span {
@@ -257,13 +259,11 @@
 }
 
 .card .more-info {
-  border: 1px solid #808393;
-  height: 98%;
-  border-radius: 5px;
   padding: 5px;
   background-color: #dbd4b7;
   font-family: "JMH Typewriter";
   position: relative;
+  height: calc(100% - 10px);
 }
 
 .card .more-info h2 {
@@ -318,36 +318,21 @@
 .card .more-info .dead-stamp {
   height: 60%;
   position: absolute;
-  top: 28%;
-  left: 30%;
+  top: 40%;
+  left: 20%;
 }
 
-@media (max-width: 961px) and (min-width: 767px) {
-  .card {
-    width: 35vw;
-    height: 50vw;
-  }
-  .card .basic {
-    height: 100%;
-  }
-  .card .basic p {
-    padding: 15px 5px 10px;
-  }
-}
-
-@media (max-width: 961px) and (min-width: 767px) {
-  section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 body {
