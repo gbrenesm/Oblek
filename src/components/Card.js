@@ -1,23 +1,22 @@
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMinus } from '@fortawesome/free-solid-svg-icons'
-
 
 function Card({character}) {
   const [open, setOpen] = useState(false)
   
   return (
     <div className='card' onClick={() => setOpen(!open)}>
-      {open &&
-      <div className="basic">
-        <img src={character.image} alt="Character"/>
-        <p>{character.name} <span><FontAwesomeIcon icon={faMinus}/></span></p>
+      {!open &&
+      <div className="folder" style={{ backgroundImage:"url('images/Old_file_folder.png')"}}>
+        <img src="images/Rick_and_morty.png" alt="Rick and Morty logo"/>
+        <img src="images/Top_secret.png" alt="Top secret stamp"/>
+        <h2>The Rick and Morty Agency</h2>
+        <p>Name: {character.name}</p>
       </div>}
-      {!open && 
-      <div className="more-info" >
+      {open && 
+      <div className="more-info" style={{ backgroundImage:"url('images/Old_papper_background.jpg')"}}>
         <div>
-          <h2>Personal card</h2>
-          <p>No. {character.id}/671</p>
+          <h2>Ultra-secret report</h2>
+          <p>No. <u>{character.id}</u>/671</p>
         </div>
         <div>
           <div>
@@ -31,7 +30,8 @@ function Card({character}) {
         </div>
         <p>Origin: <u>{character.origin.name}</u></p>
         <p>Last know location: <u>{character.location.name}</u></p>
-        {character.status === 'Dead' && <img src="Dead_stamp.png" alt="Dead stamp" className="dead-stamp"/>}
+        <p>This information is secret and YOU CAN'T make any use of this.</p>
+        {character.status === 'Dead' && <img src="images/Dead_stamp.png" alt="Dead stamp" className="dead-stamp"/>}
       </div>}
     </div>
   )

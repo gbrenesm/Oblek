@@ -1,43 +1,48 @@
 .card {
-  border: 1px solid $borderInput;
-  border-radius: $borderRadius;
   margin: 20px;
   width: 280px;
   height: 380px;
   cursor: pointer;
 
 // For displaying the basic info card.
-  .basic {
-    background-color: $cardBackground;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+  .folder {
     height: 100%;
-    
+    background-size: cover;
+    position: relative;
 
-    img {
-      width: 100%;
-      height: 85%;
-      object-fit: cover;
+    img:nth-child(1){
+      width: 50%;
+      position: absolute;
+      top: 20%;
+      right: 25%;
+    }
+
+    h2{
+      position: absolute;
+      top: 55%;
+      text-align: center;
     }
 
     p {
-      padding: 10px 0;
+      font-family: $cardFont;
+      position: absolute;
+      top: 85%;
+      text-align: center;
+      width: 100%;
     }
 
-    span {
-      @include span();
-      background-color: white;
-      color: $cardBackground;
-      padding: 5px 8px;
-      border-radius: 50%;
+    img:nth-child(2){
+      width: 70%;
+      position: absolute;
+      top: 5%;
+      right: 15%;
+      z-index: 1;
     }
   }
 
   // For displaying more info card.
   .more-info {
     padding: 5px;
-    background-color: $cardBackground;
     font-family: $cardFont;
     position: relative;
     height: calc(100% - 10px);
@@ -73,11 +78,17 @@
       
     }
 
-  .dead-stamp {
-      height: 60%;
-      position: absolute;
-      top: 40%;
-      left: 20%;
+    .dead-stamp {
+        height: 60%;
+        position: absolute;
+        top: 40%;
+        left: 20%;
+      }
+
+    >p:last-child{
+      color: red;
+      text-align: center;
+      margin-top: 20px;
     }
   }
 }
