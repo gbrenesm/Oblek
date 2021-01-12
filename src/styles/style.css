@@ -222,7 +222,7 @@
 
 .card {
   margin: 20px;
-  width: 280px;
+  width: 295px;
   height: 380px;
   cursor: pointer;
 }
@@ -251,7 +251,7 @@
   position: absolute;
   top: 85%;
   text-align: center;
-  width: 100%;
+  width: 90%;
 }
 
 .card .folder img:nth-child(2) {
@@ -263,7 +263,7 @@
 }
 
 .card .more-info {
-  padding: 5px;
+  padding: 8px 15px;
   font-family: "JMH Typewriter";
   position: relative;
   height: calc(100% - 10px);
@@ -321,14 +321,14 @@
 .card .more-info .dead-stamp {
   height: 60%;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 20%;
 }
 
-.card .more-info > p:last-child {
+.card .more-info .red {
   color: red;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 section {

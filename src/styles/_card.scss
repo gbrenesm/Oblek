@@ -1,6 +1,6 @@
 .card {
   margin: 20px;
-  width: 280px;
+  width: 295px;
   height: 380px;
   cursor: pointer;
 
@@ -28,7 +28,7 @@
       position: absolute;
       top: 85%;
       text-align: center;
-      width: 100%;
+      width: 90%;
     }
 
     img:nth-child(2){
@@ -42,7 +42,7 @@
 
   // For displaying more info card.
   .more-info {
-    padding: 5px;
+    padding: 8px 15px;
     font-family: $cardFont;
     position: relative;
     height: calc(100% - 10px);
@@ -81,14 +81,14 @@
     .dead-stamp {
         height: 60%;
         position: absolute;
-        top: 40%;
+        top: 30%;
         left: 20%;
       }
 
-    >p:last-child{
+    .red{
       color: red;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 }

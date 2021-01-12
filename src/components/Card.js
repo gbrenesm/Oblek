@@ -30,7 +30,7 @@ function Card({character}) {
         </div>
         <p>Origin: <u>{character.origin.name}</u></p>
         <p>Last know location: <u>{character.location.name}</u></p>
-        <p>This information is secret and YOU CAN'T make any use of this.</p>
+        <p className="red">This information is secret and YOU CAN'T make any use of this.</p>
         {character.status === 'Dead' && <img src="images/Dead_stamp.png" alt="Dead stamp" className="dead-stamp"/>}
       </div>}
     </div>
