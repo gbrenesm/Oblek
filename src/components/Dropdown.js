@@ -53,17 +53,16 @@ function Dropdown() {
       {open && <div>
         <ul>
           {characters?.map(character =>(
-            <div>
-            <li key={character.name} onClick={() => addCharacter(character)}>{character.name}
-            </li>
+            <div key={character.name}>
+            <li onClick={() => addCharacter(character)}>{character.name}</li>
               {/* Here I check if the element is selected, if true then shows a check symbol. */}
-            <p>{selectedCharacters.some(elem => elem.id === character.id) && <FontAwesomeIcon icon={faCheck}/>}</p>
+            <p onClick={() => addCharacter(character)}>{selectedCharacters.some(elem => elem.id === character.id) && <FontAwesomeIcon icon={faCheck}/>}</p>
             </div>
           ))}
         </ul>
       </div>}
       <hr/>
-      <h1>2. Tarjetas de API</h1>
+      <h1>3. Tarjetas de API</h1>
       <section>
         {/* First I sort the array by the id of the chracters, so the Cards display in that order */}
         {!emptyArray && selectedCharacters.sort((a, b) => a.id - b.id).map(character => (

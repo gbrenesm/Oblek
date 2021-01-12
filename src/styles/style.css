@@ -217,6 +217,7 @@
 .dropdown > div:nth-child(3) p {
   color: #00aaaa;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .card {
@@ -357,6 +358,12 @@ body {
 @media (max-width: 961px) and (min-width: 767px) {
   body {
     margin: 10px 30px;
+  }
+}
+
+@media (min-width: 962px) {
+  body {
+    margin: 10px 50px;
   }
 }
 
